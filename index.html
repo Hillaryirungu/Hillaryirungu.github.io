@@ -73,11 +73,21 @@
   @keyframes pulse{0%{opacity:.55; transform:scale(0.4);} 80%{opacity:0;} 100%{opacity:0; transform:scale(2.6);}}
   @media (prefers-reduced-motion: reduce){ .pulse{animation:none; opacity:0;} }
 
-  .stats{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:52px;}
+  .stats{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:52px;}
   @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr);}}
-  .stat{background:var(--bg); padding:22px 20px;}
-  .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.7rem; font-weight:700;}
+  .stat{border-radius:6px; padding:20px 18px 18px; border:1px solid var(--line); border-top:3px solid var(--c); background:color-mix(in srgb, var(--c) 9%, var(--surface));}
+  .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.9rem; font-weight:700; color:var(--c);}
   .stat span{color:var(--muted); font-size:0.82rem;}
+  .stat:nth-child(1){--c:var(--accent);}
+  .stat:nth-child(2){--c:var(--green);}
+  .stat:nth-child(3){--c:#4f86c6;}
+  .stat:nth-child(4){--c:#b45f96;}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .stat:nth-child(3){--c:#7aa9dd;} :root:not([data-theme="light"]) .stat:nth-child(4){--c:#d488b4;} }
+  :root[data-theme="dark"] .stat:nth-child(3){--c:#7aa9dd;}
+  :root[data-theme="dark"] .stat:nth-child(4){--c:#d488b4;}
+
+  .band{width:100%; background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .band > .wrap{padding:72px 24px;}
 
   section{padding:56px 0; border-top:1px solid var(--line);}
   h2.head{font-size:1.6rem; margin:0 0 28px; letter-spacing:-0.01em;}
@@ -186,10 +196,12 @@
     </div>
   </section>
 
-  <section id="about" class="wrap">
-    <h2 class="head">Where operations, technology and intelligence converge</h2>
-    <p class="intro">My work sits at the intersection of business operations, technology, data and intelligence. I translate complex operational environments into structured systems — understanding how the business actually performs in the field, identifying operational and control gaps, structuring the information needed to manage them, and designing processes and technology that improve execution, visibility and accountability.</p>
-    <p class="intro">Across GPS and IoT, asset intelligence, recovery, investigations, automation and process transformation, I focus on connecting people, systems and data so leadership can see what is happening, understand why it is happening, and make better-informed decisions at scale.</p>
+  <section id="about" class="band" style="border-top:none;">
+    <div class="wrap">
+      <h2 class="head">Where operations, technology and intelligence converge</h2>
+      <p class="intro" style="max-width:52em;">My work sits at the intersection of business operations, technology, data and intelligence. I translate complex operational environments into structured systems — understanding how the business actually performs in the field, identifying operational and control gaps, structuring the information needed to manage them, and designing processes and technology that improve execution, visibility and accountability.</p>
+      <p class="intro" style="max-width:52em; margin-bottom:0;">Across GPS and IoT, asset intelligence, recovery, investigations, automation and process transformation, I focus on connecting people, systems and data so leadership can see what is happening, understand why it is happening, and make better-informed decisions at scale.</p>
+    </div>
   </section>
 
   <section id="experience" class="wrap">
