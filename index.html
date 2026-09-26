@@ -52,20 +52,22 @@
   @media(min-width:640px){.navlinks{display:flex;}}
 
   /* hero */
-  .hero{padding:64px 0 0;}
-  .hero-grid{display:grid; grid-template-columns:1fr; gap:32px; align-items:center;}
-  @media(min-width:800px){.hero-grid{grid-template-columns:1.1fr 0.9fr; gap:20px;}}
-  .beacon{display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--muted); margin-bottom:22px;}
+  .hero{padding:22px 0 0;}
+  .hero-grid{display:grid; grid-template-columns:1fr; gap:18px; align-items:stretch;}
+  @media(min-width:800px){.hero-grid{grid-template-columns:1fr 1fr; gap:24px;}}
+  .route-visual{display:flex; align-items:center; justify-content:center; height:100%; min-height:220px;}
+  @media(min-width:800px){.route-visual{min-height:100%;}}
+  .beacon{display:inline-flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--muted); margin-bottom:10px;}
   .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft); flex:none;}
-  .hero h1{font-size:clamp(2.6rem, 6vw, 4.2rem); line-height:0.98; margin:0 0 20px; letter-spacing:-0.02em; font-weight:700;}
-  .hero p.lede{font-size:1.12rem; color:var(--muted); max-width:34em; margin:0 0 30px;}
-  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:8px;}
-  .btn{display:inline-block; padding:11px 20px; border-radius:3px; font-size:0.92rem; font-weight:600; text-decoration:none; transition:opacity .15s;}
+  .hero h1{font-size:clamp(1.9rem, 4.4vw, 2.9rem); line-height:0.98; margin:0 0 10px; letter-spacing:-0.02em; font-weight:700;}
+  .hero p.lede{font-size:0.94rem; color:var(--muted); max-width:36em; margin:0 0 14px;}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:0;}
+  .btn{display:inline-block; padding:9px 16px; border-radius:3px; font-size:0.86rem; font-weight:600; text-decoration:none; transition:opacity .15s;}
   .btn-solid{background:var(--ink); color:var(--bg);}
   .btn-outline{border:1px solid var(--line);}
   .btn:hover{opacity:0.8;}
-  .route-svg{width:100%; height:auto; display:block;}
-  .route-label{font-size:0.7rem; fill:var(--muted); font-family:'IBM Plex Mono',monospace;}
+  .route-svg{width:100%; height:100%; max-height:340px; display:block;}
+  .route-label{font-size:15px; fill:var(--muted); font-family:'IBM Plex Mono',monospace;}
   .route-line{stroke:var(--line); stroke-width:1.5; fill:none; stroke-dasharray:4 5;}
   .route-node{fill:var(--surface); stroke:var(--muted); stroke-width:1.4;}
   .route-node.active{fill:var(--accent); stroke:var(--accent);}
@@ -73,11 +75,11 @@
   @keyframes pulse{0%{opacity:.55; transform:scale(0.4);} 80%{opacity:0;} 100%{opacity:0; transform:scale(2.6);}}
   @media (prefers-reduced-motion: reduce){ .pulse{animation:none; opacity:0;} }
 
-  .stats{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:52px;}
+  .stats{display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-top:16px;}
   @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr);}}
-  .stat{border-radius:6px; padding:20px 18px 18px; border:1px solid var(--line); border-top:3px solid var(--c); background:color-mix(in srgb, var(--c) 9%, var(--surface));}
-  .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.9rem; font-weight:700; color:var(--c);}
-  .stat span{color:var(--muted); font-size:0.82rem;}
+  .stat{border-radius:6px; padding:12px 14px 11px; border:1px solid var(--line); border-top:3px solid var(--c); background:color-mix(in srgb, var(--c) 9%, var(--surface));}
+  .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color:var(--c); line-height:1.1;}
+  .stat span{color:var(--muted); font-size:0.76rem;}
   .stat:nth-child(1){--c:var(--accent);}
   .stat:nth-child(2){--c:var(--green);}
   .stat:nth-child(3){--c:#4f86c6;}
@@ -87,16 +89,21 @@
   :root[data-theme="dark"] .stat:nth-child(4){--c:#d488b4;}
 
   .band{width:100%; background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-  .band > .wrap{padding:72px 24px;}
+  .band > .wrap{padding:22px 24px;}
 
-  section{padding:56px 0; border-top:1px solid var(--line);}
-  h2.head{font-size:1.6rem; margin:0 0 28px; letter-spacing:-0.01em;}
-  p.intro{color:var(--muted); max-width:38em; margin:-16px 0 28px;}
+  section{padding:20px 0; border-top:1px solid var(--line);}
+  h2.head{font-size:1.35rem; margin:0 0 14px; letter-spacing:-0.01em;}
+  p.intro{color:var(--muted); max-width:38em; margin:0 0 14px; font-size:0.94rem;}
 
-  .tl{display:flex; flex-direction:column;}
-  .tl-item{display:grid; grid-template-columns:110px 1fr; gap:20px; padding:22px 0; border-top:1px solid var(--line);}
-  .tl-item:first-child{border-top:none;}
-  .tl-year{font-size:0.86rem; color:var(--accent); font-weight:600; padding-top:2px; font-family:'IBM Plex Mono',monospace;}
+  .tl{display:grid; grid-template-columns:1fr; gap:14px;}
+  @media(min-width:700px){.tl{grid-template-columns:1fr 1fr;}}
+  .tl-item{display:grid; grid-template-columns:90px 1fr; gap:16px; padding:18px 20px; border:1px solid var(--line); border-left:3px solid var(--c); border-radius:6px; background:color-mix(in srgb, var(--c) 7%, var(--surface));}
+  .tl-item:nth-child(1){--c:var(--accent);}
+  .tl-item:nth-child(2){--c:var(--green);}
+  .tl-item:nth-child(3){--c:#4f86c6;}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tl-item:nth-child(3){--c:#7aa9dd;} }
+  :root[data-theme="dark"] .tl-item:nth-child(3){--c:#7aa9dd;}
+  .tl-year{font-size:0.86rem; color:var(--c); font-weight:600; padding-top:2px; font-family:'IBM Plex Mono',monospace;}
   .tl-role{font-weight:600; margin:0 0 4px; font-size:1.05rem;}
   .tl-org{color:var(--muted); font-size:0.92rem; margin:0 0 10px;}
   .tl-desc{color:var(--ink); font-size:0.96rem; max-width:42em;}
@@ -168,21 +175,21 @@
           <a class="btn btn-outline" href="https://www.linkedin.com/in/hillary-irungu/">Connect on LinkedIn</a>
         </div>
       </div>
-      <div>
-        <svg class="route-svg" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live route between Kenya, Qatar, UAE and Uganda">
-          <path class="route-line" d="M60,168 L200,60 L262,44 L60,168 L110,120 L60,168"/>
-          <circle class="route-node" cx="60" cy="168" r="5"/>
-          <text class="route-label" x="70" y="172">KENYA</text>
-          <circle class="route-node" cx="110" cy="120" r="5"/>
-          <text class="route-label" x="120" y="124">UGANDA</text>
-          <circle class="route-node" cx="200" cy="60" r="5"/>
-          <text class="route-label" x="210" y="64">QATAR</text>
-          <circle class="route-node" cx="262" cy="44" r="5"/>
-          <text class="route-label" x="234" y="28">UAE</text>
+      <div class="route-visual">
+        <svg class="route-svg" viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live route between Kenya, Qatar, UAE and Uganda">
+          <path class="route-line" d="M70,268 L280,80 L360,50 L70,268 L150,170 L70,268"/>
+          <circle class="route-node" cx="70" cy="268" r="7"/>
+          <text class="route-label" x="84" y="274">KENYA</text>
+          <circle class="route-node" cx="150" cy="170" r="7"/>
+          <text class="route-label" x="164" y="176">UGANDA</text>
+          <circle class="route-node" cx="280" cy="80" r="7"/>
+          <text class="route-label" x="294" y="86">QATAR</text>
+          <circle class="route-node" cx="360" cy="50" r="7"/>
+          <text class="route-label" x="316" y="28">UAE</text>
           <g>
-            <animateMotion dur="9s" repeatCount="indefinite" path="M60,168 L200,60 L262,44 L60,168 L110,120 L60,168"/>
-            <circle class="route-node active pulse" r="6"/>
-            <circle class="route-node active" r="5"/>
+            <animateMotion dur="9s" repeatCount="indefinite" path="M70,268 L280,80 L360,50 L70,268 L150,170 L70,268"/>
+            <circle class="route-node active pulse" r="8"/>
+            <circle class="route-node active" r="7"/>
           </g>
         </svg>
       </div>
