@@ -11,7 +11,7 @@
   :root{
     --bg:#f6f5f2; --surface:#ffffff; --ink:#14181c; --muted:#5b6570;
     --line:#dfdcd4; --accent:#c25a1f; --accent-soft:#c25a1f22;
-    --green:#3f7a5c;
+    --green:#3f7a5c; --c-blue:#4f86c6; --c-mauve:#b45f96; --c-teal:#3f8f8f; --c-gold:#b98a2e;
     box-sizing:border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -20,11 +20,13 @@
     :root:not([data-theme="light"]){
       --bg:#12151a; --surface:#171b21; --ink:#eceae4; --muted:#8b93a0;
       --line:#2a2f36; --accent:#ff9a52; --accent-soft:#ff9a5222; --green:#6fc79c;
+      --c-blue:#7aa9dd; --c-mauve:#d488b4; --c-teal:#6cc2c2; --c-gold:#dcb35c;
     }
   }
   :root[data-theme="dark"]{
     --bg:#12151a; --surface:#171b21; --ink:#eceae4; --muted:#8b93a0;
     --line:#2a2f36; --accent:#ff9a52; --accent-soft:#ff9a5222; --green:#6fc79c;
+    --c-blue:#7aa9dd; --c-mauve:#d488b4; --c-teal:#6cc2c2; --c-gold:#dcb35c;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth; scroll-padding-top: calc(72px + env(safe-area-inset-top,0px));}
@@ -93,6 +95,21 @@
 
   .band{width:100%; background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   .band > .wrap{padding:22px 24px;}
+  .band-grid{display:grid; grid-template-columns:1fr; gap:26px;}
+  @media(min-width:820px){.band-grid{grid-template-columns:1fr 1.15fr;}}
+  .skill-tabs{display:grid; grid-template-columns:repeat(2,1fr); gap:8px;}
+  @media(max-width:479px){.skill-tabs{grid-template-columns:1fr;}}
+  .skill-tab{display:flex; align-items:center; padding:9px 12px; border-radius:5px; font-size:0.83rem; font-weight:500; color:var(--ink); border-left:3px solid var(--c); background:color-mix(in srgb, var(--c) 12%, var(--surface));}
+  .skill-tab:nth-child(1){--c:var(--accent);}
+  .skill-tab:nth-child(2){--c:var(--green);}
+  .skill-tab:nth-child(3){--c:var(--c-blue);}
+  .skill-tab:nth-child(4){--c:var(--c-mauve);}
+  .skill-tab:nth-child(5){--c:var(--c-teal);}
+  .skill-tab:nth-child(6){--c:var(--c-gold);}
+  .skill-tab:nth-child(7){--c:var(--accent);}
+  .skill-tab:nth-child(8){--c:var(--green);}
+  .skill-tab:nth-child(9){--c:var(--c-blue);}
+  .skill-tab:nth-child(10){--c:var(--c-mauve);}
 
   section{padding:20px 0; border-top:1px solid var(--line);}
   h2.head{font-size:1.35rem; margin:0 0 14px; letter-spacing:-0.01em;}
@@ -211,9 +228,27 @@
 
   <section id="about" class="band" style="border-top:none;">
     <div class="wrap">
-      <h2 class="head">Where operations, technology and intelligence converge</h2>
-      <p class="intro" style="max-width:52em;">My work sits at the intersection of business operations, technology, data and intelligence. I translate complex operational environments into structured systems — understanding how the business actually performs in the field, identifying operational and control gaps, structuring the information needed to manage them, and designing processes and technology that improve execution, visibility and accountability.</p>
-      <p class="intro" style="max-width:52em; margin-bottom:0;">Across GPS and IoT, asset intelligence, recovery, investigations, automation and process transformation, I focus on connecting people, systems and data so leadership can see what is happening, understand why it is happening, and make better-informed decisions at scale.</p>
+      <div class="band-grid">
+        <div>
+          <h2 class="head">Where Operations, Technology &amp; Intelligence Converge</h2>
+          <p class="intro" style="max-width:52em;">My work sits at the intersection of business operations, technology, data and intelligence. I translate complex operational environments into structured systems — understanding how the business actually performs in the field, identifying operational and control gaps, structuring the information needed to manage them, and designing processes and technology that improve execution, visibility and accountability.</p>
+          <p class="intro" style="max-width:52em; margin-bottom:0;">Across GPS and IoT, asset intelligence, recovery, investigations, automation and process transformation, I focus on connecting people, systems and data so leadership can see what is happening, understand why it is happening, and make better-informed decisions at scale.</p>
+        </div>
+        <div class="skills-col">
+          <div class="skill-tabs">
+            <span class="skill-tab">Operations &amp; Process Transformation</span>
+            <span class="skill-tab">Project &amp; Program Management</span>
+            <span class="skill-tab">GPS, IoT &amp; Asset Intelligence</span>
+            <span class="skill-tab">Data Analytics &amp; Business Intelligence</span>
+            <span class="skill-tab">Python &amp; Data Engineering</span>
+            <span class="skill-tab">Machine Learning &amp; Deep Learning</span>
+            <span class="skill-tab">Financial Modelling &amp; Quantitative Analysis</span>
+            <span class="skill-tab">Automation &amp; Workflow Engineering</span>
+            <span class="skill-tab">Risk Management &amp; Investigations</span>
+            <span class="skill-tab">Asset Recovery &amp; Operational Intelligence</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
