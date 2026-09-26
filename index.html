@@ -393,5 +393,38 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var stops = isDark
+    ? [[18,21,26],[42,26,18],[16,34,28],[36,20,44],[18,21,26]]
+    : [[246,245,242],[252,228,200],[218,240,228],[228,220,248],[246,245,242]];
+  function lerp(a,b,t){ return a + (b - a) * t; }
+  function colorAt(t){
+    var n = stops.length - 1;
+    var seg = Math.min(Math.floor(t * n), n - 1);
+    var localT = (t * n) - seg;
+    var c1 = stops[seg], c2 = stops[seg + 1];
+    var r = Math.round(lerp(c1[0], c2[0], localT));
+    var g = Math.round(lerp(c1[1], c2[1], localT));
+    var b = Math.round(lerp(c1[2], c2[2], localT));
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+  var ticking = false;
+  function update(){
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - doc.clientHeight;
+    var t = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
+    document.body.style.backgroundColor = colorAt(t);
+    ticking = false;
+  }
+  function onScroll(){
+    if(!ticking){ window.requestAnimationFrame(update); ticking = true; }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+</script>
 </body>
 </html>
