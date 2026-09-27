@@ -185,6 +185,17 @@
   .foot-note{color:var(--muted); font-size:0.82rem;}
 
   :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .proj-featured{grid-template-columns:1fr; --c:var(--green);}
+  .proj-featured:hover{border-left-color:var(--c); background:color-mix(in srgb, var(--c) 4%, transparent);}
+  .live-badge{display:inline-flex; align-items:center; gap:6px; font-size:0.7rem; font-weight:600; color:var(--green); background:color-mix(in srgb, var(--green) 15%, var(--surface)); border:1px solid color-mix(in srgb, var(--green) 35%, var(--line)); padding:3px 10px 3px 8px; border-radius:20px; margin-left:10px; vertical-align:middle;}
+  .live-badge .ldot{width:6px; height:6px; border-radius:50%; background:var(--green); flex:none; position:relative;}
+  .live-badge .ldot::before{content:""; position:absolute; inset:-4px; border-radius:50%; background:var(--green); opacity:0.5; animation:live-ping 1.8s ease-out infinite;}
+  @media (prefers-reduced-motion: reduce){ .live-badge .ldot::before{animation:none;} }
+  .proj-links{display:flex; gap:16px; flex-wrap:wrap;}
+  .proj-link-primary{font-weight:700; color:var(--green);}
+  .preview-frame{margin-top:16px; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:var(--surface); box-shadow:0 10px 26px rgba(0,0,0,.12);}
+  .preview-frame iframe{width:100%; height:560px; border:0; display:block;}
+  @media(max-width:640px){.preview-frame iframe{height:440px;}}
 </style>
 </head>
 <body>
@@ -239,8 +250,8 @@
     <div class="stats">
       <div class="stat"><b>17+</b><span>Years in operations &amp; technology</span></div>
       <div class="stat"><b>4</b><span>Countries: Kenya, Uganda, Qatar, UAE</span></div>
-      <div class="stat"><b>6</b><span>Applied projects, ops to machine learning</span></div>
-      <div class="stat"><b>2</b><span>Companies led at operations-lead level</span></div>
+      <div class="stat"><b>7</b><span>Applied projects, ops to machine learning</span></div>
+      <div class="stat"><b>3</b><span>Companies led at operations-lead level</span></div>
     </div>
   </section>
 
@@ -304,6 +315,22 @@
     <h2 class="head">Selected projects</h2>
     <p class="intro">Applied work in machine learning, quantitative finance and operational tooling.</p>
     <div class="plist">
+      <div class="proj proj-featured">
+  <div>
+    <div class="proj-top">
+      <h3>Portfolio Risk Dashboard <span class="live-badge"><span class="ldot"></span>Live</span></h3>
+      <div class="proj-links">
+        <a class="proj-link proj-link-primary" href="https://hillaryirungu-portfolio-risk-dashboard.streamlit.app/" target="_blank" rel="noopener">Open live app →</a>
+        <a class="proj-link" href="https://github.com/Hillaryirungu/Portfolio-Risk-Dashboard" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+    <p>End-to-end financial risk analytics application: an ETL pipeline that ingests and cleans market data with an offline-safe fallback, a quantitative risk engine computing Sharpe, Sortino and Calmar ratios, max drawdown, historical and parametric Value at Risk, Conditional VaR, beta and correlation, and an interactive dashboard for building and stress-testing a custom portfolio in real time. Backed by a pytest suite and GitHub Actions CI running on every push.</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Quantitative Finance</span><span class="tag">Data Engineering</span><span class="tag">CI/CD</span></div>
+  </div>
+  <div class="preview-frame">
+    <iframe src="https://hillaryirungu-portfolio-risk-dashboard.streamlit.app/?embed=true" loading="lazy" title="Portfolio Risk Dashboard — live preview"></iframe>
+  </div>
+</div>
 
       <div class="proj">
         <div>
