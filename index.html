@@ -170,29 +170,6 @@
 
 
   /* portfolio repository card */
-  .repo-card{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr); gap:28px; padding:22px; border:1px solid var(--line); border-left:4px solid var(--c-blue); border-radius:8px; background:var(--surface); overflow:hidden;}
-  .repo-preview{position:relative; min-height:270px; border:1px solid var(--line); border-radius:7px; overflow:hidden; background:var(--bg); box-shadow:0 12px 30px rgba(0,0,0,.10);}
-  .repo-browser{height:32px; display:flex; align-items:center; gap:6px; padding:0 12px; border-bottom:1px solid var(--line); background:color-mix(in srgb, var(--surface) 88%, var(--line));}
-  .repo-browser i{width:8px; height:8px; border-radius:50%; background:var(--line); display:block;}
-  .repo-screen{padding:24px 26px; height:calc(100% - 32px); display:grid; grid-template-columns:1.1fr .9fr; gap:20px; align-items:center; background:linear-gradient(135deg, color-mix(in srgb, var(--surface) 96%, var(--c-blue)), var(--surface));}
-  .repo-screen .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--c-blue); letter-spacing:.08em; text-transform:uppercase; margin-bottom:7px;}
-  .repo-screen h3{font-size:clamp(1.3rem,2.4vw,2rem); line-height:1; margin:0 0 9px;}
-  .repo-screen p{font-size:.78rem; color:var(--muted); margin:0; max-width:34em;}
-  .repo-mini-panel{border:1px solid var(--line); border-radius:6px; padding:12px; background:color-mix(in srgb, var(--surface) 92%, var(--bg));}
-  .repo-mini-line{height:7px; border-radius:8px; background:var(--line); margin:7px 0;}
-  .repo-mini-line.short{width:62%;}
-  .repo-mini-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:7px; margin-top:12px;}
-  .repo-mini-stat{height:46px; border:1px solid var(--line); border-radius:4px; background:var(--surface);}
-  .repo-copy h3{margin:0 0 7px; font-size:1.2rem;}
-  .repo-copy p{margin:0 0 14px; color:var(--muted); font-size:.92rem; max-width:55em;}
-  .repo-meta{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px;}
-  .repo-tag{font-family:'IBM Plex Mono',monospace; font-size:.7rem; padding:5px 9px; border:1px solid var(--line); border-radius:20px; color:var(--muted); background:color-mix(in srgb, var(--bg) 70%, var(--surface));}
-  .repo-actions{display:flex; gap:9px; flex-wrap:wrap;}
-  .repo-action{display:inline-block; padding:8px 12px; border-radius:4px; text-decoration:none; font-size:.82rem; font-weight:600; border:1px solid var(--line);}
-  .repo-action.primary{background:var(--ink); color:var(--surface); border-color:var(--ink);}
-  .repo-action.secondary{color:var(--ink); background:var(--surface);}
-  @media(max-width:900px){.repo-card{grid-template-columns:1fr;}.repo-preview{min-height:250px;}}
-  @media(max-width:560px){.repo-screen{grid-template-columns:1fr; padding:18px;}.repo-mini-panel{display:none;}.repo-preview{min-height:220px;}}
 
   .cap-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px 40px;}
   @media(min-width:640px){.cap-grid{grid-template-columns:repeat(4,1fr);}}
@@ -473,36 +450,6 @@
     </div>
   </section>
 
-
-  <section class="wrap">
-    <h2 class="head">Portfolio Website</h2>
-    <div class="repo-card">
-      <div class="repo-preview" aria-label="Preview of Hillary Irungu portfolio website">
-        <div class="repo-browser"><i></i><i></i><i></i></div>
-        <div class="repo-screen">
-          <div>
-            <div class="eyebrow">Operations • Technology • Data</div>
-            <h3>Hillary Irungu</h3>
-            <p>Professional portfolio bringing together operational leadership, technology, intelligence, data analytics and technical projects.</p>
-          </div>
-          <div class="repo-mini-panel">
-            <div class="repo-mini-line"></div>
-            <div class="repo-mini-line short"></div>
-            <div class="repo-mini-grid"><div class="repo-mini-stat"></div><div class="repo-mini-stat"></div><div class="repo-mini-stat"></div><div class="repo-mini-stat"></div></div>
-          </div>
-        </div>
-      </div>
-      <div class="repo-copy">
-        <h3>Hillaryirungu.github.io</h3>
-        <p>A personal portfolio website built to present professional experience, operational systems, data and analytics work, and selected technical projects in one structured interface.</p>
-        <div class="repo-meta"><span class="repo-tag">HTML</span><span class="repo-tag">CSS</span><span class="repo-tag">JavaScript</span><span class="repo-tag">GitHub Pages</span><span class="repo-tag">Responsive Design</span></div>
-        <div class="repo-actions">
-          <a class="repo-action primary" href="https://hillaryirungu.github.io/" target="_blank" rel="noopener">View live site →</a>
-          <a class="repo-action secondary" href="https://github.com/Hillaryirungu/Hillaryirungu.github.io" target="_blank" rel="noopener">View repository →</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="wrap">
     <h2 class="head">Capabilities</h2>
