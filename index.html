@@ -57,8 +57,9 @@
 
   /* hero */
   .hero{padding:22px 0 0;}
-  .hero-grid{display:grid; grid-template-columns:auto auto minmax(320px,1fr) 400px; gap:24px; align-items:center;}
-  @media(max-width:1100px){.hero-grid{grid-template-columns:auto auto 1fr;}.route-visual{grid-column:1 / -1;}}
+  .hero-grid{display:grid; grid-template-columns:340px 260px minmax(420px,1fr) 460px; gap:48px; align-items:center;}
+  @media(max-width:1250px){.hero-grid{grid-template-columns:320px 240px minmax(300px,1fr) 380px; gap:32px;}.route-visual{grid-column:4;}}
+  @media(max-width:1000px){.hero-grid{grid-template-columns:1fr 1fr; gap:28px;}.hero-actions{grid-column:1 / -1;}.route-visual{grid-column:2; grid-row:1 / span 2;}}
   @media(max-width:800px){.hero-grid{grid-template-columns:1fr; gap:18px;}.route-visual{grid-column:auto;}}
   .route-visual{display:flex; align-items:center; justify-content:center; height:100%; min-height:220px;}
   @media(min-width:800px){.route-visual{min-height:100%;}}
