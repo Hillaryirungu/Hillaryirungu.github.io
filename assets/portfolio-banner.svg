@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840">
+<rect width="1600" height="840" fill="#11151a"/>
+<rect x="80" y="80" width="1440" height="680" rx="18" fill="#171c22" stroke="#303741"/>
+<text x="130" y="190" fill="#8b93a0" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="5">OPERATIONS • TECHNOLOGY • DATA</text>
+<text x="130" y="315" fill="#f1f0eb" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="700">HILLARY IRUNGU</text>
+<text x="130" y="375" fill="#b9c0c8" font-family="Arial, Helvetica, sans-serif" font-size="32">Operations &amp; Technology Professional</text>
+<line x1="130" y1="455" x2="1470" y2="455" stroke="#303741"/>
+<text x="130" y="525" fill="#c25a1f" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">OPERATIONS</text>
+<text x="450" y="525" fill="#3f7a5c" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">PROJECT MANAGEMENT</text>
+<text x="880" y="525" fill="#7aa9dd" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">GPS &amp; IoT</text>
+<text x="1130" y="525" fill="#d488b4" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">DATA &amp; ANALYTICS</text>
+<text x="130" y="625" fill="#8b93a0" font-family="Arial, Helvetica, sans-serif" font-size="22">Building systems that connect field execution, technology and decision intelligence.</text>
+</svg>
